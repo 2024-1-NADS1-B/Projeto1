@@ -1,0 +1,67 @@
+readme 
+#include <DHT.h>
+
+#define DHTPIN D4
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+void test_dht_sensor() {
+    float humidity = dht.readHumidity();
+    float temperature = dht.readTemperature();
+
+    TEST_ASSERT_FALSE(isnan(humidity));
+    TEST_ASSERT_FALSE(isnan(temperature));
+}
+
+void setup() {
+    UNITY_BEGIN();
+    dht.begin();
+    RUN_TEST(test_dht_sensor);
+    UNITY_END();
+}
+
+void loop() {
+    // Not used in this test
+}
+Executar Testes:
+
+No PlatformIO, abra o terminal integrado e execute o comando:
+sh
+Copiar código
+pio test
+4. Instalar Dependências e Executar Testes em Múltiplas Plataformas
+Windows
+Instalar Arduino IDE ou Visual Studio Code com PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
+Linux
+Instalar Arduino IDE:
+Use o gerenciador de pacotes da sua distribuição para instalar o Arduino IDE ou baixe diretamente do site oficial.
+sh
+Copiar código
+sudo apt update
+sudo apt install arduino
+Instalar Visual Studio Code e PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
+macOS
+Instalar Arduino IDE ou Visual Studio Code com PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
+
+
+HISTÓRICO DE LANÇAMENTOS:
+0.2.1 - 23/05/2022
+CONCLUSÃO: Código concluido 
+0.2.0 - 20/05/2024
+MUDANÇA: Terminamos o código do arduino 
+0.1.1 - 13/05/2024
+CONSERTADO: Erro na biblioteca DHT11
+0.1.0 - 29/04/2024
+O primeiro lançamento adequado
+MUDANÇA: Atualização dos códigos
+0.0.1 - 22/04/2024
+Trabalho em andamento
+
+
+REFERÊNCIAS:
+1-https://www.embrapa.br/contando-ciencia/animais-e-criacoes/-/asset_publisher/jzCoSDOAGLc4/content/como-nascem-os-pintinhos-/1355746?inheritRedirect=false
+2-https://ligadoseintegrados.canalrural.com.br/aves/esfriou-na-granja-veja-como-proteger-as-aves-quando-a-temperatura-cai/
+3-https://opresenterural.com.br/cobb-defende-controle-de-temperatura-do-pintinho-apos-eclosao/#:~:text=%C3%89%20importante%20que%20o%20ambiente
