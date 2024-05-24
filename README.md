@@ -7,20 +7,10 @@ Projeto 1
 </p>
 
 # Sistema Integrado para Criação de Pintinhos
-## Anie Bissoli (RA:24025800), Felipe de Castro Lima(RA: 24025867), João Vitor Cenedeze (24025874)
+## Integrantes: Anie Bissoli (RA:24025800), Felipe de Castro Lima(RA: 24025867), João Vitor Cenedeze (24025874)
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
-
-## Rodnil da Silva: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
-
+## Professor Orientador: Rodnil da Silva
 ## Descrição
-
-<p align="center">
-<img [src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO"](https://search.app.goo.gl/wE163qN) border="0">
-  Game by <a href=["http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</](https://search.app.goo.gl/wE163qN)a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
-
-
 O projeto consiste em criar um sistema integrado utilizando um Arduino ou similar, sensores de
 temperatura e umidade, relés para controle de dispositivos, lâmpadas de aquecimento e um display
 LCD ou LED. O sistema será capaz de monitorar continuamente a temperatura e umidade ambiente,
@@ -28,107 +18,170 @@ controlando as lâmpadas de aquecimento. Um display mostrará informações impo
 temperatura e umidade. O sistema poderá ser opcionalmente controlado remotamente através de um
 aplicativo móvel ou interface web.
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+
 
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
-|readme.md<br>
+ProjetoAvicultura/
 
-A pasta raiz contem dois arquivos que devem ser alterados:
+├── src/
 
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
+│   ├── main.ino
 
-Há também 4 pastas que seguem da seguinte forma:
+│   ├── wifi_credentials.h
 
-<b>documentos</b>: Toda a documentação estará nesta pasta.
+│   ├── blynk_credentials.h
 
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
+│   ├── sensor_functions.h
 
-<b>imagens</b>: Imagens do sistema
+│   └── led_functions.h
 
-<b>src</b>: Pasta que contém o código fonte.
+├── lib/
+
+│   ├── DHT/
+
+│   ├── LiquidCrystal_I2C/
+
+│   ├── Blynk/
+
+│   └── ESP8266WiFi/
+
+├── platformio.ini
+
+└── README.md
+
 
 ## 🛠 Instalação
-
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+WINDOWS:
+É necessário baixar o arduino e executa-ló com o programa utilizado na montagem.
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+1. Configuração de Ambiente com Arduino IDE
+Passos Gerais (Windows, Linux, macOS)
+Baixar e Instalar o Arduino IDE:
 
-Para abrir este projeto você necessita das seguintes ferramentas:
+Baixe o Arduino IDE e instale para o seu sistema operacional (Windows, Linux, macOS).
+Adicionar Suporte ao ESP8266:
 
--<a href="https://godotengine.org/download">GODOT</a>
+Abra o Arduino IDE.
+Vá em File > Preferences.
+No campo "Additional Board Manager URLs", adicione o seguinte URL: http://arduino.esp8266.com/stable/package_esp8266com_index.json e clique em "OK".
+Vá em Tools > Board > Boards Manager, procure por "esp8266" e instale a opção "esp8266 by ESP8266 Community".
+Instalar Bibliotecas Necessárias:
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+Vá em Sketch > Include Library > Manage Libraries.
+Procure e instale as seguintes bibliotecas:
+Blynk
+DHT sensor library (por Adafruit)
+LiquidCrystal_I2C (por Frank de Brabander)
+
+2. Configuração de Ambiente com PlatformIO
+Passos Gerais (Windows, Linux, macOS)
+Instalar Visual Studio Code:
+
+Baixe o Visual Studio Code e instale para o seu sistema operacional.
+Instalar PlatformIO:
+
+Abra o Visual Studio Code.
+Vá em Extensions (ícone de quadrado no painel lateral) e procure por "PlatformIO IDE".
+Instale a extensão "PlatformIO IDE".
+Configurar PlatformIO:
+
+Abra o PlatformIO no Visual Studio Code.
+Crie um novo projeto e selecione a placa "NodeMCU 1.0 (ESP-12E Module)" ou a correspondente ao seu ESP8266.
+Configurar platformio.ini:
+
+No diretório do projeto, edite o arquivo platformio.ini para incluir as dependências:
+ini
+Copiar código
+[env:esp8266]
+platform = espressif8266
+board = nodemcuv2
+framework = arduino
+lib_deps =
+    blynkkk/Blynk
+    adafruit/DHT sensor library
+    johnrickman/LiquidCrystal_I2C
+    
+3. Testes Automatizados com PlatformIO
+PlatformIO permite escrever testes unitários que podem ser executados automaticamente. Aqui está um exemplo de como configurar um teste simples para validar a leitura do sensor DHT.
+
+Adicionar Diretório de Testes:
+
+Dentro do diretório do projeto, crie uma pasta chamada test.
+Dentro da pasta test, crie uma subpasta chamada test_dht.
+Criar Arquivo de Teste:
+Dentro da pasta test_dht, crie um arquivo test_main.cpp com o seguinte conteúdo:
+cpp
+Copiar código
+#include <Arduino.h>
+#include <unity.h>
+#include <DHT.h>
+
+#define DHTPIN D4
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+void test_dht_sensor() {
+    float humidity = dht.readHumidity();
+    float temperature = dht.readTemperature();
+
+    TEST_ASSERT_FALSE(isnan(humidity));
+    TEST_ASSERT_FALSE(isnan(temperature));
+}
+void setup() {
+    UNITY_BEGIN();
+    dht.begin();
+    RUN_TEST(test_dht_sensor);
+    UNITY_END();
+}
+void loop() {
+    // Not used in this test
+}
+Executar Testes:
+No PlatformIO, abra o terminal integrado e execute o comando:
+sh
+Copiar código
+pio test
+
+4. Instalar Dependências e Executar Testes em Múltiplas Plataformas
+Windows
+Instalar Arduino IDE ou Visual Studio Code com PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
+Linux
+Instalar Arduino IDE:
+Use o gerenciador de pacotes da sua distribuição para instalar o Arduino IDE ou baixe diretamente do site oficial.
+sh
+Copiar código
+sudo apt update
+sudo apt install arduino
+Instalar Visual Studio Code e PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
+macOS
+Instalar Arduino IDE ou Visual Studio Code com PlatformIO seguindo os passos acima.
+Executar testes conforme descrito na seção anterior.
 
 ## 🗃 Histórico de lançamentos
 
-A cada atualização os detalhes devem ser lançados aqui.
-
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
-
-## 📋 Licença/License
-
+0.2.1 - 23/05/2022
+CONCLUSÃO: Código concluido
+0.2.0 - 20/05/2024
+MUDANÇA: Terminamos o código do arduino
+0.1.1 - 13/05/2024
+CONSERTADO: Erro na biblioteca DHT11
+0.1.0 - 29/04/2024
+O primeiro lançamento adequado
+MUDANÇA: Atualização dos códigos
+0.0.1 - 22/04/2024
+Trabalho em andamento
 
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+1-https://www.embrapa.br/contando-ciencia/animais-e-criacoes/-/asset_publisher/jzCoSDOAGLc4/content/como-nascem-os-pintinhos-/1355746?inheritRedirect=false
+
+2-https://ligadoseintegrados.canalrural.com.br/aves/esfriou-na-granja-veja-como-proteger-as-aves-quando-a-temperatura-cai/
+
+3-https://opresenterural.com.br/cobb-defende-controle-de-temperatura-do-pintinho-apos-eclosao/#:~:text=%C3%89%20importante%20que%20o%20ambiente
