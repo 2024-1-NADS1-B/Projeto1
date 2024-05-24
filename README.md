@@ -11,7 +11,7 @@ Projeto 1
 
 ## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Rodnil da Silva: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
 
 ## Descrição
 
@@ -21,7 +21,12 @@ Projeto 1
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+O projeto consiste em criar um sistema integrado utilizando um Arduino ou similar, sensores de
+temperatura e umidade, relés para controle de dispositivos, lâmpadas de aquecimento e um display
+LCD ou LED. O sistema será capaz de monitorar continuamente a temperatura e umidade ambiente,
+controlando as lâmpadas de aquecimento. Um display mostrará informações importantes como
+temperatura e umidade. O sistema poderá ser opcionalmente controlado remotamente através de um
+aplicativo móvel ou interface web.
 <br><br>
 Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
 <br><br>
