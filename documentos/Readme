@@ -65,3 +65,14 @@ REFERÊNCIAS:
 1-https://www.embrapa.br/contando-ciencia/animais-e-criacoes/-/asset_publisher/jzCoSDOAGLc4/content/como-nascem-os-pintinhos-/1355746?inheritRedirect=false
 2-https://ligadoseintegrados.canalrural.com.br/aves/esfriou-na-granja-veja-como-proteger-as-aves-quando-a-temperatura-cai/
 3-https://opresenterural.com.br/cobb-defende-controle-de-temperatura-do-pintinho-apos-eclosao/#:~:text=%C3%89%20importante%20que%20o%20ambiente
+
+
+Para realização e funcionamento do projeto utilizamos a placa Arduino Uno, adicionamos as bibliotecas DHT11 e LiquidCrystal, conectamos o DHT11 no pino A1, o potenciômetro no A0, led vermelho no 2, led amarelo no 3 e o led verde no 4. 
+Ligamos o DHT11, potenciômetro, os leds e a placa I2C ao GND. O DHT11, o potenciômetro e a placa I2C ao 5V. Conectamos o valor do DHT11 ao potenciômetro, podendo então controlar o valor 
+da umidade e da temperatura, e ligamos os valores a placa I2C, mostrando seus valores na placa. Criamos um if e else para monitorar as luzes, se a temperatura estiver entre 
+31 e 35 graus os leds vermelhos ficam acesos, entre 28 e 30 graus os leds amarelos, entre 25 e 27 os leds verdes e caso passe do valor, nenhum led acende.
+Já na parte do blynk, usamos um ESP8266 com sensor DHT11 para medir temperatura e umidade, conectando o DHT11 ao pino D2. 
+Incluímos as bibliotecas DHT, ESP8266WiFi e BlynkSimpleEsp8266 para lidar com o sensor e a comunicação WiFi. 
+Configuramos o WiFi com SSID "...." e senha "......". 
+O código inicializa o sensor e o Blynk com o token de autenticação, enviando leituras de temperatura e umidade para o aplicativo Blynk a cada segundo. 
+Se a leitura falhar, uma mensagem é exibida no monitor serial.
