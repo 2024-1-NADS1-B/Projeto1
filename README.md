@@ -26,6 +26,8 @@ ProjetoAvicultura/
 
 ├── src/
 
+codigotrabalho.ino
+
 │   ├── main.ino
 
 │   ├── wifi_credentials.h
